@@ -1,3 +1,4 @@
+import axios from 'axios';
 /**
  * actions type
  */
@@ -10,17 +11,17 @@ const DE_SELECT_TIME = 'DE_SELECT_TIME';
  * actions creator
  */
 
-export function getList(time) {
+export function getList(list) {
     return {
         type: GET_LIST,
-        time
+        list
     };
 }
 
 export function getCurrentPost(id) {
     return {
         type: GET_CURRENT_POST,
-        id  
+        id
     };
 }
 
@@ -33,6 +34,14 @@ export function addSelectTime() {
 export function deSlectTime() {
     return {
         type: DE_SELECT_TIME
+    };
+}
+
+export function fetchCurrentList() {
+    return function (dispatch) {
+        axios.get('api/4/news/latest').then((res) => {
+            dispatch(getList(res.body));
+        });
     };
 }
 //输出actions枚举
