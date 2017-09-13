@@ -40,7 +40,7 @@ export function deSlectTime() {
 export function fetchCurrentList() {
     return function (dispatch) {
         axios.get('api/4/news/latest').then((res) => {
-            dispatch(getList(res.body));
+            dispatch(getList(res.data.stories));
         });
     };
 }
