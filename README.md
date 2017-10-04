@@ -141,5 +141,5 @@ module.exports = {
 };
 ```  
 ## react-redux middleware  
-redux-devtools-extension 可以在devtool中使用redux插件debug
+redux-devtools-extension 可以在devtool中使用redux插件debug  
 redux-thunk  可以在action中进行异步操作
