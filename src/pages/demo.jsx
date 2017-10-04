@@ -13,7 +13,13 @@ class Demo extends React.Component {
         const { list } = this.props;
         return (
             <div>
-                <h1>{list.toString()}</h1>
+                {list.map(function(passage, index) {
+                    return (
+                        <li key={index}>
+                            {passage.title}
+                        </li>
+                    );
+                })}
             </div>
         );
     }
