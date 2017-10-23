@@ -1,7 +1,7 @@
 {
-  "name": "react-zhihudaily",
+  "name": "{{projectName}",
   "version": "1.0.0",
-  "description": "",
+  "description": "{{description}}",
   "main": "",
   "scripts": {
     "dev": "node ./server.js"
