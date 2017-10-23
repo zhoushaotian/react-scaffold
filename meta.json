@@ -1,0 +1,23 @@
+{
+    "questions": {
+        "projectName": {
+            "type": "input",
+            "name": "projectName",
+            "message": "project name:",
+            "default": "new-project"
+        },
+        "description": {
+            "type": "input",
+            "name": "description",
+            "message": "description for this project:",
+            "default": "a project build by choice"
+        },
+        "author": {
+            "type": "input",
+            "name": "author",
+            "message": "author",
+            "default": "tian"
+        }
+    }
+
+}
