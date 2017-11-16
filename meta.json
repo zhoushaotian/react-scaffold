@@ -37,21 +37,20 @@
                 }
 
             ]
-        },
-        "filters": {
-            "vue": [
-                "src/actions/",
-                "src/pages/",
-                "src/reducers/",
-                "src/router.jsx",
-                "src/app.jsx",
-                "src/App.vue",
-                "src/store.js"
-            ],
-            "react": [
-                "src/main.js"
-            ]
         }
+    },
+    "filters": {
+        "vue": [
+            "src/actions/",
+            "src/pages/",
+            "src/reducers/",
+            "src/router.jsx",
+            "src/app.jsx",
+            "src/App.vue",
+            "src/store.js"
+        ],
+        "react": [
+            "src/main.js"
+        ]
     }
-
 }
