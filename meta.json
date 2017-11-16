@@ -17,6 +17,40 @@
             "name": "author",
             "message": "author",
             "default": "tian"
+        },
+        "mode": {
+            "type": "list",
+            "message": "choose scaffold mode",
+            "name": "mode",
+            "choices": [
+                {
+                    "name": "React",
+                    "value": "react"
+                },
+                {
+                    "name": "Vue",
+                    "value": "vue"
+                },
+                {
+                    "name": "Simple",
+                    "value": "simple"
+                }
+
+            ]
+        },
+        "filters": {
+            "vue": [
+                "src/actions/",
+                "src/pages/",
+                "src/reducers/",
+                "src/router.jsx",
+                "src/app.jsx",
+                "src/App.vue",
+                "src/store.js"
+            ],
+            "react": [
+                "src/main.js"
+            ]
         }
     }
 

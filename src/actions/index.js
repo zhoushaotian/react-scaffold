@@ -39,9 +39,9 @@ export function deSlectTime() {
 
 export function fetchCurrentList() {
     return function (dispatch) {
-        axios.get('api/4/news/latest').then((res) => {
-            dispatch(getList(res.data.stories));
-        });
+        setTimeout(function() {
+            return 'hello world'
+        }, 1000)
     };
 }
 //输出actions枚举

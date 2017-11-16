@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 // react mode
 {{#if react}}
 const path = require('path');
@@ -5,28 +7,30 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const extractLESS = new ExtractTextPlugin('app.[chunkhash:8].min.css');
+const extractLESS = new ExtractTextPlugin('css/app.[chunkhash:8].min.css');
+const del = require('del');
 
+del(path.resolve(__dirname, 'public/'));
 module.exports = {
     entry: {
-        app: [path.resolve(__dirname, 'src/app.jsx')]
+        app: [path.resolve(__dirname, 'build/src/app.jsx')]
     },
     output: {
-        path: path.resolve(__dirname, './dist'),
+        path: path.resolve(__dirname, './public'),
         filename: 'js/[name].[hash:8].js',
         chunkFilename: 'js/[name].[hash:8].js',
         publicPath: '/'
     },
-    devtool: 'source-map',
+    devtool: '#cheap-module-eval-source-map',
     resolve: {
         extensions: ['.js', '.jsx', '.json']
     },
     module: {
         rules: [
             {
-                test: /\.js|jsx|vue$/,
+                test: /\.js|jsx$/,
                 loader: 'eslint-loader',
-                include: [path.join(__dirname, 'src')],
+                include: [path.join(__dirname, 'build/')],
                 enforce: 'pre',
                 options: {
                     formatter: require('eslint-friendly-formatter')
@@ -35,7 +39,7 @@ module.exports = {
             {
                 test: /\.jsx$/,
                 loader: 'babel-loader',
-                include: [path.join(__dirname, 'src')],
+                include: [path.join(__dirname, 'build/')],
                 options: {
                     presets: [
                         'react'
@@ -45,7 +49,7 @@ module.exports = {
             {
                 test: /\.js$/,
                 loader: 'babel-loader',
-                include: [path.join(__dirname, 'src')]
+                include: [path.join(__dirname, 'build/')]
             },
             {
                 test: /\.less$/,
@@ -82,8 +86,9 @@ module.exports = {
     ]
 };
 {{/if}}
-// vue mode
-{{#if vue}}
+
+// vue mode 
+{{if vue}
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -91,7 +96,7 @@ const htmlWebpackPlugin = require('html-webpack-plugin');
 const FriendlyErrorPlugin = require('friendly-errors-webpack-plugin');
 module.exports = {
     entry: {
-        app: [path.resolve(__dirname, 'src/main.js')]
+        app: ['./dev_client.js', path.resolve(__dirname, 'src/main.js')]
     },
     output: {
         path: path.resolve(__dirname, 'dist/static/'),
@@ -99,7 +104,7 @@ module.exports = {
         publicPath: '/',
         chunkFilename: 'js/[name].bundle.js'
     },
-    devtool: 'source-map',
+    devtool: '#cheap-module-eval-source-map',
     module: {
         rules: [
             {
@@ -164,7 +169,6 @@ module.exports = {
     },
     plugins: [
         new ExtractTextPlugin('css/appstyle.css'),
-        new webpack.HotModuleReplacementPlugin(),
         new FriendlyErrorPlugin(),
         new htmlWebpackPlugin({
             titile: 'hotreloaddemo',

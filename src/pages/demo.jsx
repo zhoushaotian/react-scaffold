@@ -7,19 +7,12 @@ class Demo extends React.Component {
         super();
     }
     componentDidMount() {
-        this.props.dispatch(fetchCurrentList());
     }
     render() {
         const { list } = this.props;
         return (
             <div>
-                {list.map(function(passage, index) {
-                    return (
-                        <li key={index}>
-                            {passage.title}
-                        </li>
-                    );
-                })}
+                hello world
             </div>
         );
     }
