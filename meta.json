@@ -56,7 +56,6 @@
             "src/",
             "dev_client.js",
             "index.html",
-            "package.json",
             "proxy.js",
             "server.js",
             "webpack.config.dev.js",
