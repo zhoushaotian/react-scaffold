@@ -51,6 +51,16 @@
         ],
         "react": [
             "src/main.js"
+        ],
+        "simple": [
+            "src/",
+            "dev_client.js",
+            "index.html",
+            "package.json",
+            "proxy.js",
+            "server.js",
+            "webpack.config.dev.js",
+            "webpack.config.js"
         ]
     }
 }
