@@ -1,4 +1,9 @@
-# 项目脚手架  
+# 项目脚手架
+该项目是choice-cli的模板文件，支持多模式构建。  
+- vue模式
+- react模式
+- simple模式  
+使用simple模式构建只会包含eslint和babel配置文件,react模式和vue模式会包含router和store的相关配置并使用webpack打包生成
 ## 项目结构  
 ```
 src/ 
@@ -10,7 +15,8 @@ src/
 .index.html //webpack的html模板
 proxy.js   // devserver的API代理配置
 server.js  // devserver
-```
+```  
+meta.json文件是模板信息的配置
 ## webpack配置
 ```js
 const path = require('path');
@@ -142,4 +148,4 @@ module.exports = {
 ```  
 ## react-redux middleware  
 redux-devtools-extension 可以在devtool中使用redux插件debug  
-redux-thunk  可以在action中进行异步操作
+redux-thunk  可以在action中进行异步操作  
