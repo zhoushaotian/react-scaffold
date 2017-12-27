@@ -1,5 +1,5 @@
 # 项目脚手架
-该项目是choice-cli的模板文件，支持多模式构建。  
+该项目是choice-cli的模板文件,支持多模式构建。  
 - vue模式
 - react模式
 - simple模式  
@@ -15,8 +15,8 @@ src/
 .index.html //webpack的html模板
 proxy.js   // devserver的API代理配置
 server.js  // devserver
-```  
-meta.json文件是模板信息的配置
+```
+> meta.json文件是模板信息的配置
 ## webpack配置
 ```js
 const path = require('path');
