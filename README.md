@@ -3,7 +3,7 @@
 - vue模式
 - react模式
 - simple模式  
-使用simple模式构建只会包含eslint和babel配置文件,react模式和vue模式会包含router和store的相关配置并使用webpack打包生成
+使用simple模式构建只会包含eslint和babel配置文件,react模式和vue模式会包含router和store的相关配置并使用webpack打包生成
 ## 项目结构  
 ```
 src/ 
