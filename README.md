@@ -1,9 +1,9 @@
 # 项目脚手架
-该项目是choice-cli的模板文件,支持多模式构建。  
+该项目是choice-cli的模板文件,支持多模式构建。  
 - vue模式
-- react模式
+- react模式
 - simple模式  
-使用simple模式构建只会包含eslint和babel配置文件,react模式和vue模式会包含router和store的相关配置并使用webpack打包生成
+使用simple模式构建只会包含eslint和babel配置文件,react模式和vue模式会包含router和store的相关配置并使用webpack打包生成
 ## 项目结构  
 ```
 src/ 
@@ -16,7 +16,7 @@ src/
 proxy.js   // devserver的API代理配置
 server.js  // devserver
 ```
-> meta.json文件是模板信息的配置
+> meta.json文件是模板信息的配置
 ## webpack配置
 ```js
 const path = require('path');
